@@ -29,6 +29,26 @@
                         <label for="fname">Family Name</label>
                         <input type="text" name="lname" id="lname" required="required" pattern="[a-zA-Z]" maxlength="15">
                     </p>
-       
+            </fieldset> 
+            <fieldset>
+                <legend>Your Unit</legend>
+                    <p>
+                        <label for="cos10011">COS10011</label>
+                        <input type="radio" name="course" id="cos10011" value="cos10011" required="required">
+                        <label for="cos60004">COS60004</label>
+                        <input type="radio" name="course" id="cos60004" value="cos60004">
+                        <label for="cos60007">COS60007</label>
+                        <input type="radio" name="course" id="cos60007" value="cos60007">
+                    </p>
+                    <p>
+                        <label for="tutor">Your Tutor</label>
+                        <select name="tutor" id="tutor" required="required">
+                            <option value="">Please Select</option>
+                            <option value="John Tutor">John Tutor</option>
+                            <option value="Jane Johnson">Tutor Johnson</option>
+                            <option value="Chu Torr">Chu Torr</option>
+                        </select>
+                    </p>
+            </fieldset>   
     </body>
 </html>
