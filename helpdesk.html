@@ -18,58 +18,74 @@
             <p>The Help Desk is located at ATC260. Open 10.30 to 19.00 Monday to Friday.</p>
         <form action="/appointment.php" method="post">
             <fieldset>
-                <legend>Student Details</legend>
-                    <p>
-                        <label for="sid">Student ID</label>
-                        <input type="text" name="sid" id="sid" required="required" pattern="{7,10}">
-                    </p>
-                    <p>
-                        <label for="fname">Given Name</label>
-                        <input type="text" name="fname" id="fname" required="required" pattern="[a-zA-Z]" maxlength="15">
-                        <label for="fname">Family Name</label>
-                        <input type="text" name="lname" id="lname" required="required" pattern="[a-zA-Z]" maxlength="15">
-                    </p>
-            </fieldset> 
-            <fieldset>
-                <legend>Your Unit</legend>
-                    <p>
-                        <label for="cos10011">COS10011</label>
-                        <input type="radio" name="course" id="cos10011" value="cos10011" required="required">
-                        <label for="cos60004">COS60004</label>
-                        <input type="radio" name="course" id="cos60004" value="cos60004">
-                        <label for="cos60007">COS60007</label>
-                        <input type="radio" name="course" id="cos60007" value="cos60007">
-                    </p>
-                    <p>
-                        <label for="tutor">Your Tutor</label>
-                        <select name="tutor" id="tutor" required="required">
-                            <option value="">Please Select</option>
-                            <option value="John Tutor">John Tutor</option>
-                            <option value="Jane Johnson">Tutor Johnson</option>
-                            <option value="Chu Torr">Chu Torr</option>
-                        </select>
-                    </p>
-            </fieldset>   
-            <fieldset>
-                <legend>Issue</legend>
-                    <p>
-                        <label for="html">HTML</label>
-                        <input type="checkbox" name="issue" id="html" value="html" checked="checked">
-                        <label for="css">CSS</label>
-                        <input type="checkbox" name="issue" id="css" value="css">
-                        <label for="js">JavaScript</label>
-                        <input type="checkbox" name="issue" id="js" value="js">
-                        <label for="php">PHP</label>
-                        <input type="checkbox" name="issue" id="php" value="php">
-                        <label for="sql">MySQL</label>
-                        <input type="checkbox" name="issue" id="sql" value="sql">
-                    </p>
-                    <p>
-                        <label for="dsc">Description of Issue</label>
-                    </p>
-                    <p>            
-                        <textarea name="dsc" id="dsc" placeholder="Write description of your problem here..." rows="4" cols="40"></textarea>
-                    </p>
+                <fieldset>
+                    <legend>Student Details</legend>
+                        <p>
+                            <label for="sid">Student ID</label>
+                            <input type="text" name="sid" id="sid" required="required" pattern="[0-9]{7,10}">
+                        </p>
+                        <p>
+                            <label for="fname">Given Name</label>
+                            <input type="text" name="fname" id="fname" required="required" pattern="[a-zA-Z]+" maxlength="15">
+                            <label for="fname">Family Name</label>
+                            <input type="text" name="lname" id="lname" required="required" pattern="[a-zA-Z]+" maxlength="15">
+                        </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Your Unit</legend>
+                        <p>
+                            <label for="cos10011">COS10011</label>
+                            <input type="radio" name="course" id="cos10011" value="cos10011" required="required">
+                            <label for="cos60004">COS60004</label>
+                            <input type="radio" name="course" id="cos60004" value="cos60004">
+                            <label for="cos60007">COS60007</label>
+                            <input type="radio" name="course" id="cos60007" value="cos60007">
+                        </p>
+                        <p>
+                            <label for="tutor">Your Tutor</label>
+                            <select name="tutor" id="tutor" required="required">
+                                <option value="">Please Select</option>
+                                <option value="John Tutor">John Tutor</option>
+                                <option value="Tutor Johnson">Tutor Johnson</option>
+                                <option value="Chu Torr">Chu Torr</option>
+                            </select>
+                        </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Issue</legend>
+                        <p>
+                            <label for="html">HTML</label>
+                            <input type="checkbox" name="issue" id="html" value="html" checked="checked">
+                            <label for="css">CSS</label>
+                            <input type="checkbox" name="issue" id="css" value="css">
+                            <label for="js">JavaScript</label>
+                            <input type="checkbox" name="issue" id="js" value="js">
+                            <label for="php">PHP</label>
+                            <input type="checkbox" name="issue" id="php" value="php">
+                            <label for="sql">MySQL</label>
+                            <input type="checkbox" name="issue" id="sql" value="sql">
+                        </p>
+                        <p>
+                            <label for="dsc">Description of Issue</label>
+                        </p>
+                        <p>
+                            <textarea name="dsc" id="dsc" placeholder="Write description of your problem here..." rows="4" cols="40"></textarea>
+                        </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Preferred Date/Time</legend>
+                       <p>
+                            <label for="date">Date</label>
+                            <input type="text" name="date" id="date" placeholder="dd/mm/yyyy" required="required" pattern="\d{2}/\d{2}/\d{4}">
+                       </p>
+                       <p>
+                            <label for="time">Time</label>
+                            <input type="text" name="time" id="time" placeholder="00:00" required="required" pattern="\d{2}:\d{2}">
+                       </p>
+                </fieldset>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset Form">
             </fieldset>
+        </form>
     </body>
 </html>
